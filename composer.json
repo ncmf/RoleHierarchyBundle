@@ -1,0 +1,35 @@
+{
+  "name": "ncmf/role-hierarchy",
+  "description": "Dynamic Symfony role hierarchy stored in database with admin interface.",
+  "type": "symfony-bundle",
+  "homepage": "https://github.com/ncmf/DoctrineExtensions",
+  "license": "MIT",
+  "keywords": [
+    "symfony",
+    "role-hierarchy"
+  ],
+  "authors": [
+    {
+      "name": "Alexander Averichev",
+      "email": "averichev@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "symfony/framework-bundle": "^2.7 || ^3.0"
+  },
+  "require-dev": {
+    "ncmf/doctrine-extensions": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "NCMF\\RoleHierarchyBundle\\": ""
+    }
+  },
+  "target-dir": "",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.1-dev"
+    }
+  }
+}
