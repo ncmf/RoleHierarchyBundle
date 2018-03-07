@@ -2,7 +2,7 @@
   "name": "ncmf/role-hierarchy",
   "description": "Dynamic Symfony role hierarchy stored in database with admin interface.",
   "type": "symfony-bundle",
-  "homepage": "https://github.com/ncmf/DoctrineExtensions",
+  "homepage": "https://github.com/ncmf/RoleHierarchyBundle",
   "license": "MIT",
   "keywords": [
     "symfony",
