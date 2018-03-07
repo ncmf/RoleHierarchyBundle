@@ -1,6 +1,6 @@
 <?php
 
-namespace NCMF\RoleHierarchy\Role;
+namespace NCMF\RoleHierarchyBundle\Role;
 
 use Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter as BaseRoleHierarchyVoter;
 

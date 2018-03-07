@@ -1,9 +1,9 @@
 services:
     ncmf.security.role_hierarchy:
-        class: NCMF\RoleHierarchy\Role\RoleHierarchy
-        arguments: ['%security.role_hierarchy.roles%']
+        class: NCMF\RoleHierarchyBundle\Role\RoleHierarchy
+        arguments: ['%security.role_hierarchy.roles%', '@doctrine.orm.entity_manager']
     ncmf.security.role_hierarchy_voter:
-        class: NCMF\RoleHierarchy\Role\RoleHierarchyVoter
+        class: NCMF\RoleHierarchyBundle\Role\RoleHierarchyVoter
         arguments: ['@ncmf.security.role_hierarchy']
         tags:
             - { name: security.voter, priority: 245 }

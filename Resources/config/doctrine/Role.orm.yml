@@ -1,0 +1,63 @@
+NCMF\RoleHierarchyBundle\Entity\Role:
+    type: entity
+    table: null
+    repositoryClass: Gedmo\Tree\Entity\Repository\NestedTreeRepository
+    gedmo:
+        tree:
+            type: nested
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        lft:
+            type: integer
+            gedmo:
+                - treeLeft
+        rgt:
+            type: integer
+            gedmo:
+                - treeRight
+        lvl:
+            type: integer
+            gedmo:
+                - treeLevel
+        name:
+            type: string
+            length: 255
+        code:
+            type: string
+            length: '100'
+            unique: true
+        description:
+            type: text
+            nullable: true
+        enabled:
+            type: boolean
+    manyToOne:
+        root:
+            targetEntity: Role
+            joinColumn:
+                name: tree_root
+                referencedColumnName: id
+                onDelete: CASCADE
+            gedmo:
+                - treeRoot
+        parent:
+            targetEntity: Role
+            inversedBy: children
+            joinColumn:
+                name: parent_id
+                referencedColumnName: id
+                onDelete: CASCADE
+            gedmo:
+                - treeParent
+    oneToMany:
+        children:
+            targetEntity: Role
+            mappedBy: parent
+            orderBy:
+                lft: ASC
+    lifecycleCallbacks: {  }

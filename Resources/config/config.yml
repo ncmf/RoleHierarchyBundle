@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@NCMFRoleHierarchyBundle/Resources/config/services.yml" }

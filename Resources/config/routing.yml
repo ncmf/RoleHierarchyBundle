@@ -1,0 +1,4 @@
+ncmf_role_hierarchy_admin_role:
+    resource: "@NCMFRoleHierarchyBundle/Resources/config/routing/role.yml"
+    prefix:   /admin/role
+

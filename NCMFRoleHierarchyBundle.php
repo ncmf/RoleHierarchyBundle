@@ -1,6 +1,6 @@
 <?php
 
-namespace NCMF\RoleHierarchy;
+namespace NCMF\RoleHierarchyBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
